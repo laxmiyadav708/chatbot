@@ -1,0 +1,144 @@
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f9fa;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+header {
+    background: linear-gradient(to right,#7b2ff7, #6647d5);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    position: relative;
+}
+
+
+.status-dot {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.status-dot.online {
+    background-color: #171818;
+}
+
+
+#chat-container {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 80%;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+
+.message.bot {
+    align-self: flex-start;
+    background: #b0a8ea;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.message.user {
+    align-self: flex-end;
+    background: #7c5cd6;
+    color: white;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.message .bot-icon {
+    font-size: 1.5rem;
+}
+
+.message .message-text {
+    font-size: 1rem;
+    color: #333;
+}
+
+.message .timestamp {
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.user-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.width-fix {
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+
+form#chat-form {
+    display: flex;
+    padding: 1rem;
+    background-color: #fdfffd;
+    border-top: 1px solid #ddd;
+}
+
+form#chat-form input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+}
+
+
+form#chat-form button {
+    margin-left: 10px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    background: linear-gradient(to right, #7b2ff7, #6647d5);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+form#chat-form button:hover {
+    background: linear-gradient(to right, #6a1bcc, #8125e9);
+    transform: scale(1.1);
+}

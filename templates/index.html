@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Academic Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <header>
+    <h1>BrainyBuddy</h1>
+    <p>Your intelligent companion for academic queries and learning support</p>
+  </header>
+
+  <main id="chat-container">
+    <div class="message bot">
+      <div class="avatar">🤖</div>
+      <div class="text">Hello! I'm your Chatbot. Your smart study buddy. Need help? Just ask!</div>
+    </div>
+  </main>
+
+  <form id="chat-form">
+    <input type="text" id="user-input" placeholder="Ask me anything about your studies..." autocomplete="off" />
+    <button title="Submit your query">⮞</button>
+
+  </form>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
